@@ -3,6 +3,8 @@
   <p>タイトル</p>
   <span><%= book.title %></span>
   <span><%= book.body %></span>
-    <%= image_tag book.image.url %>
+  <div id="image-wrapper">
+    <%= image_tag "#{book.image.cropped}", id: :prev_img %>
+  </div>
   <div><%= link_to "削除",book_path(book), method: :delete %></div>
 <% end %>
