@@ -1,5 +1,12 @@
 class Book < ApplicationRecord
   
-  mount_uploaders :images, ImageUploader
+  mount_uploader :image, ImageUploader
+  
+  attr_accessor :image_x
+  attr_accessor :image_y
+  attr_accessor :image_w
+  attr_accessor :image_h
+  attr_accessor :aspect_numerator
+  attr_accessor :aspect_denominator
  
 end

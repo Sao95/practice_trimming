@@ -3,8 +3,6 @@
   <p>タイトル</p>
   <span><%= book.title %></span>
   <span><%= book.body %></span>
-  <% book.images.each do |image| %>
-    <%= image_tag image.to_s %>
-  <% end %>
+    <%= image_tag book.image.url %>
   <div><%= link_to "削除",book_path(book), method: :delete %></div>
 <% end %>
