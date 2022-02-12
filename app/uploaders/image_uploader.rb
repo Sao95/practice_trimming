@@ -20,6 +20,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   end
 
   private
+    def crop
     # def cropmanipulate! do |img|→対象となる画像を取り出す
       manipulate! do |img|
         crop_x = model.image_x.to_i
